@@ -1,0 +1,23 @@
+﻿<ContentDialog
+    x:Class="ptGymUWP.Views.ClientContentDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ptGymUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bl ="using:ptGym_Dal_BL.BL"
+    mc:Ignorable="d"
+    Title="Cliente"
+    PrimaryButtonText="OK"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <StackPanel>
+        <TextBox Header="Nome" Text="{x:Bind ClientViewModel.Client.Name, Mode=TwoWay}"/>
+        <TextBox Header="CC" Text="{x:Bind ClientViewModel.Client.CC, Mode=TwoWay}"/>
+        <TextBox Header="Número de Telemóvel" Text="{x:Bind ClientViewModel.Client.Phone, Mode=TwoWay}"/>
+        <TextBox Header="Morada" Text="{x:Bind ClientViewModel.Client.HomeAddress, Mode=TwoWay}"/>
+        <TextBox Header="Localidade" Text="{x:Bind ClientViewModel.Client.Locality, Mode=TwoWay}"/>
+    </StackPanel>
+</ContentDialog>

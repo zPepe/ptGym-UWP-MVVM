@@ -1,0 +1,3 @@
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\DataAbstractionLayer\DataAbstractionLayer.csproj;neutral
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\ptGym-DAL-BL.csproj;neutral
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGymUWP\ptGymUWP.csproj;x86

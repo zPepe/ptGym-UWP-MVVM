@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="ptGymUWP.Funcionalidades.ClassClientFunc"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ptGymUWP.Funcionalidades"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:ptGym_Dal_BL.BL"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <CollectionViewSource x:Key="cvs" x:Name="cvs" IsSourceGrouped="True"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SemanticZoom Name="SemanticZoom" ViewChangeStarted="SemanticZoom_ViewChangeStarted_1">
+            <SemanticZoom.ZoomedInView>
+                <ListView Margin="20,20,0,0" Name="ListViewFuncionalidad1" FontSize="15" FontFamily="Courier New" FontWeight="Thin" ItemsSource="{Binding Source={StaticResource cvs}}">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Registration">
+                            <StackPanel>
+                                <Grid Width="1140">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="40"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Text="Refência Registo" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Height="20" Margin="0,10"/>
+                                    <TextBlock Grid.Row="1" Text="{Binding Ref}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+
+                                    <TextBlock Grid.Column="1" Text="Nome Cliente"  HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Margin="0,10"/>
+                                    <TextBlock  Grid.Row="1" Grid.Column="1" Text="{Binding Client.Name}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+
+                                    <TextBlock Grid.Column="2" Text="Aula Id" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Margin="0,10"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="2" Text="{x:Bind Class.Id}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+
+                                    <TextBlock Grid.Column="3" Text="Nome da Aula" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Margin="0,10"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Class.Name}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.GroupStyle>
+                        <GroupStyle>
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate x:DataType="models:Registration">
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{Binding Key}" Foreground="#5B5EA6"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </ListView.GroupStyle>
+                </ListView>
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <ListView x:Name="ZoomedOutList" ItemsSource="{Binding Source={StaticResource cvs}}" Margin="20,20,0,0" Header="Lista de Clientes Registados" FontSize="15" FontFamily="Courier New" FontWeight="Thin">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="models:Registration">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{Binding Client.Name}" Foreground="#5B5EA6"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+    </Grid>
+</Page>

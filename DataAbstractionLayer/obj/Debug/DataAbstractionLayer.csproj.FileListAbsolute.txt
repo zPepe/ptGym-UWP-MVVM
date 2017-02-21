@@ -1,0 +1,11 @@
+c:\users\paulo\onedrive\documentos\visual studio 2015\Projects\ptGym_Dal_BL\DataAbstractionLayer\bin\Debug\DataAbstractionLayer.dll
+c:\users\paulo\onedrive\documentos\visual studio 2015\Projects\ptGym_Dal_BL\DataAbstractionLayer\bin\Debug\DataAbstractionLayer.pdb
+c:\users\paulo\onedrive\documentos\visual studio 2015\Projects\ptGym_Dal_BL\DataAbstractionLayer\bin\Debug\SQLitePCL.dll
+c:\users\paulo\onedrive\documentos\visual studio 2015\Projects\ptGym_Dal_BL\DataAbstractionLayer\obj\Debug\DataAbstractionLayer.csprojResolveAssemblyReference.cache
+c:\users\paulo\onedrive\documentos\visual studio 2015\Projects\ptGym_Dal_BL\DataAbstractionLayer\obj\Debug\DataAbstractionLayer.dll
+c:\users\paulo\onedrive\documentos\visual studio 2015\Projects\ptGym_Dal_BL\DataAbstractionLayer\obj\Debug\DataAbstractionLayer.pdb
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\DataAbstractionLayer\bin\Debug\DataAbstractionLayer.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\DataAbstractionLayer\bin\Debug\DataAbstractionLayer.pdb
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\DataAbstractionLayer\bin\Debug\SQLitePCL.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\DataAbstractionLayer\obj\Debug\DataAbstractionLayer.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\DataAbstractionLayer\obj\Debug\DataAbstractionLayer.pdb

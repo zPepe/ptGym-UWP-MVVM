@@ -1,0 +1,122 @@
+﻿<Page
+    x:Class="ptGymUWP.Pages.RegistrationPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ptGymUWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bl="using:ptGym_Dal_BL.BL"
+    mc:Ignorable="d">
+    
+    <Page.BottomAppBar>
+        <CommandBar Foreground="Red">
+            <AppBarButton Foreground="Red" Icon="Add" Label="Adicionar Registro" ToolTipService.ToolTip="Adicionar Registro" Tapped="AppBarButton_Tapped"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Page.Resources>
+        <MenuFlyout x:Key="FlyoutBase1">
+            <MenuFlyoutItem Text="Edit" Click="Edit_Click"/>
+            <MenuFlyoutItem Text="Remove" Click="Remove_Click"/>
+        </MenuFlyout>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <RelativePanel Grid.Column="0" Margin="20,20,20,20">
+            <ListView Header="Lista de Registos" FontSize="15" FontFamily="Courier New" FontWeight="Thin" ItemsSource="{x:Bind RegistrationViewModel.Registrations}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="bl:Registration">
+                        <StackPanel Orientation="Horizontal"
+                                    HorizontalAlignment="Left"
+                                    FlyoutBase.AttachedFlyout="{StaticResource FlyoutBase1}"
+                                    RightTapped="StackPanel_RightTapped"
+                                    Background="DarkCyan"
+                                    CornerRadius="20" Padding="1"
+                                    BorderBrush="White" BorderThickness="4">
+                            <TextBlock FontSize="20"
+                                       Text="{x:Bind Ref,Mode=OneWay}"
+                                       Width="360" 
+                                       TextAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Foreground="Wheat"
+                                       FontFamily="Courier New"
+                                       FontStyle="Italic"
+                                       FontWeight="Light"/>
+                            <!--<Button Name="ButtonTeste"
+                                    HorizontalAlignment="Right"
+                                    Click="ButtonTeste_Click"
+                                    ToolTipService.ToolTip="Dados"
+                                    Background="Transparent">
+                                <StackPanel>
+                                    <Border CornerRadius="10"  
+                                            BorderBrush="Wheat" 
+                                            BorderThickness="3">
+                                        <TextBlock Margin="5" FontFamily="Segoe MDL2 Assets" Text="&#xE946;" Foreground="Wheat"/>
+                                    </Border>
+                                </StackPanel>
+                            </Button>-->
+                            <StackPanel HorizontalAlignment="Right"
+                                        Background="Transparent"
+                                        Tapped="ButtonTeste_Click">
+                                <TextBlock ToolTipService.ToolTip="Dados"
+                                           Margin="5" 
+                                           FontSize="30"
+                                           FontFamily="Segoe MDL2 Assets"
+                                           Text="&#xE946;"
+                                           Foreground="Wheat"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativePanel>
+
+        <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" Margin="50,20,0,0">
+            <TextBlock
+                       Name="TextBlockOne"
+                       FontSize="22"
+                       FontWeight="SemiBold"
+                       HorizontalAlignment="Center"/>
+            <TextBlock Name="TextBlockTilte1"
+                       Margin="0,20,0,0"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+            <TextBlock Name="TextBlockTwo"
+                       FontSize="15"
+                       FontStyle="Oblique"
+                       HorizontalAlignment="Stretch"/>
+            <TextBlock Name="TextBlockTilte2"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+            <TextBlock
+                   Name="TextBlockThree"
+                   FontSize="15"
+                   FontStyle="Oblique"
+                   HorizontalAlignment="Stretch"/>
+            <TextBlock Name="TextBlockTilte3"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+            <TextBlock
+                   Name="TextBlockFour"
+                   FontSize="15"
+                   FontStyle="Oblique"
+                   HorizontalAlignment="Stretch"/>
+            <TextBlock Name="TextBlockTilte4"
+                       FontSize="16"
+                       FontWeight="Bold"/>
+            <TextBlock
+                   Name="TextBlockFive"
+                   FontSize="15"
+                   FontStyle="Oblique"
+                   HorizontalAlignment="Stretch"/>
+        </StackPanel>
+    </Grid>
+</Page>

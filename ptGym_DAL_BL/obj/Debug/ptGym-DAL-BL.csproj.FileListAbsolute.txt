@@ -1,0 +1,11 @@
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym_Dal_BL\ptGym_Dal_BL\obj\Debug\ptGym-DAL-BL.csprojResolveAssemblyReference.cache
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym_Dal_BL\ptGym_Dal_BL\obj\Debug\ptGym_Dal_BL.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym_Dal_BL\ptGym_Dal_BL\obj\Debug\ptGym_Dal_BL.pdb
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\bin\Debug\ptGym_Dal_BL.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\bin\Debug\ptGym_Dal_BL.pdb
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\bin\Debug\DataAbstractionLayer.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\bin\Debug\SQLitePCL.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\bin\Debug\DataAbstractionLayer.pdb
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\obj\Debug\ptGym-DAL-BL.csprojResolveAssemblyReference.cache
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\obj\Debug\ptGym_Dal_BL.dll
+C:\Users\paulo\OneDrive\Documentos\Visual Studio 2015\Projects\ptGym\ptGym_Dal_BL\obj\Debug\ptGym_Dal_BL.pdb

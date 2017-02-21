@@ -1,0 +1,79 @@
+﻿<Page
+    x:Class="ptGymUWP.Funcionalidades.ClientLocalidadeFunc"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ptGymUWP.Funcionalidades"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:ptGym_Dal_BL.BL"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <CollectionViewSource x:ConnectionId='1' x:Key="cvs" x:Name="cvs" IsSourceGrouped="True"/>
+    </Page.Resources>
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SemanticZoom x:ConnectionId='2' Name="SemanticZoom"                                                   >
+            <SemanticZoom.ZoomedInView>
+                <ListView x:ConnectionId='3' Margin="20,0,0,0" Name="ListViewFuncionalidad1"  FontSize="15" FontFamily="Courier New" FontWeight="Thin" ItemsSource="{Binding Source={StaticResource cvs}}">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate                           >
+                            <StackPanel x:ConnectionId='4'>
+                                <Grid Width="1140">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"/>
+                                        <RowDefinition Height="40"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                        <ColumnDefinition Width="285*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Text="Id Cliente" VerticalAlignment="Center" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Height="20" Margin="0,10"/>
+                                    <TextBlock Grid.Row="1" Text="{Binding Id}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+
+                                    <TextBlock Grid.Column="1" Text="Nome Cliente"  HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Margin="0,10"/>
+                                    <TextBlock  Grid.Row="1" Grid.Column="1" Text="{Binding Name}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+
+                                    <TextBlock Grid.Column="2" Text="Cartão de Cidadão" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Margin="0,10"/>
+                                    <TextBlock x:ConnectionId='5' Grid.Row="1" Grid.Column="2"                     HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+
+                                    <TextBlock Grid.Column="3" Text="Nº Telemovel" HorizontalAlignment="Left" FontWeight="Bold" Foreground="#5B5EA6" Margin="0,10"/>
+                                    <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding Phone}"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10" Height="20" Foreground="Black"/>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.GroupStyle>
+                        <GroupStyle>
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate                           >
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{Binding Key}" Foreground="Black"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </ListView.GroupStyle>
+                </ListView>
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <ListView x:ConnectionId='6' x:Name="ZoomedOutList" ItemsSource="{Binding Source={StaticResource cvs}}" Margin="20,20,0,0" Header="Lista de Localidades" FontSize="15" FontFamily="Courier New" FontWeight="Thin">
+                    <ListView.ItemTemplate>
+                        <DataTemplate                           >
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="{Binding Locality}" Foreground="#5B5EA6"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+    </Grid>
+</Page>
+

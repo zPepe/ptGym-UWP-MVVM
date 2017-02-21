@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="ptGymUWP.Pages.MainPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ptGymUWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+
+    <SemanticZoom Grid.Row="1" Margin="0,0,30,10">
+        <SemanticZoom.ZoomedInView>
+            <Hub x:ConnectionId='1' x:Name="myHub" Header="Funcionalidades"                                                >
+                <HubSection MinWidth="600" Header="Informação" Background="	#F7CAC9">
+                    <DataTemplate>
+                        <Grid>
+                            <TextBlock Text="Aqui estão algumas funcionalidades!" 
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                        </Grid>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection x:ConnectionId='2' Header="Funcionalidade 1" Name="Funcionalidade1" IsTapEnabled="True" IsHeaderInteractive="True" Background="#DFCFBE" MinWidth="250" RequestedTheme="Dark">
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Aulas em que cada Cliente está Registado, fica aqui."
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                            <TextBlock Text="Carregue no &quot;See more&quot; button para ir para a funcionalidade."
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection x:ConnectionId='3' Header="Funcionalidade 2" Name="Funcionalidade2" IsHeaderInteractive="True" Background="#91A8D0" MinWidth="250">
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Clientes que cada Localidade tem, fica aqui"
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                            <TextBlock Text="Carregue no &quot;See more&quot; button para ir para a funcionalidade." 
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection x:ConnectionId='4' Header="Funcionalidade 3" Name="Funcionalidade3" IsHeaderInteractive="True" Background="#034F84" MinWidth="250" RequestedTheme="Dark">
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Aulas que cada Treinador dá, fica aqui"
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                            <TextBlock Text="Carregue no &quot;See more&quot; button para ir para a funcionalidade." 
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </HubSection>
+
+                <HubSection x:ConnectionId='5' Header="Funcionalidade 4" Name="Funcionalidade4" IsHeaderInteractive="True" Background="#98DDDE" MinWidth="250">
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="Aulas divididas por Salas de Aula, fica aqui"
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                            <TextBlock Text="Carregue no &quot;See more&quot; button para ir para a funcionalidade." 
+                           Style="{ThemeResource BodyTextBlockStyle}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </HubSection>
+            </Hub>
+        </SemanticZoom.ZoomedInView>
+        
+        <SemanticZoom.ZoomedOutView>
+            <ListView x:ConnectionId='6' x:Name="ZoomedOutList"/>
+        </SemanticZoom.ZoomedOutView>
+    </SemanticZoom>
+</Page>
+
